@@ -1,0 +1,29 @@
+.nav-link {
+  font-size: 15px;
+  margin-right: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #198754;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  font-size: 15px;
+  margin-right: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #198754;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  letter-spacing: 1px;
+}
