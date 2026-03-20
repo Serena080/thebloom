@@ -85,7 +85,7 @@ const Getproducts = () => {
 
          <div className="col-md-3 justify-content-center mb-3">
 
-        <div className='card shadow'>
+        <div className='card shadow cardeffect'>
           <img src={img_url + product.product_photo} alt="product name"className='product_img mt-3' />
 
           <div className="card-body">

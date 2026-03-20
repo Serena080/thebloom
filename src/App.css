@@ -51,12 +51,20 @@
   
   opacity: 0;
   transform: translateY(20px);
-  animation: riseUp 1s ease forwards;
-  transition: transform 0.5s ease;
+  animation: riseUp 4s ease forwards;
+  transition: transform 2s ease;
 }
 
 .product_img:hover {
   transform: scale(1.05);
+}
+
+.cardeffect{
+  opacity: 0;
+  transform: translateY(20px);
+  animation: riseUp 3.5s ease forwards;
+  transition: transform 1.5s ease;
+
 }
 
 @keyframes riseUp {
