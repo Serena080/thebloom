@@ -96,4 +96,32 @@
 
 
 
+.testimonial-card {
+  max-width: 600px;
+  background: #885309;
+  padding: 40px;
+  border-radius: 30px;
+  animation: floating 4s ease-in-out infinite;
+  font-family: papyrus;
+  
+}
+
+.designgarden{
+  background-color: beige;
+  border-radius: 30px;
+  padding: 40px;
+  font-family: MV Boli;
+
+}
+
+.gardenideas{
+  border-radius: 30px;
+  padding: 40px;
+  background-color: honeydew;
+  font-family: MV Boli;
+
+}
+
+
+
 

@@ -9,6 +9,9 @@ import Addproducts from './components/Addproducts';
 import Notfound from './components/Notfound';
 import Getproducts from './components/Getproducts';
 import Makepayment from './components/Makepayment';
+import GardenIdeas from './components/Gardenideas';
+import Plants from './components/Plants';
+import DesignGarden from './components/Designgarden';
 
 function App() {
   return (
@@ -147,7 +150,51 @@ function App() {
           <Route path="/addproducts" element={<Addproducts />} />
           <Route path="/makepayment" element={<Makepayment />} />
           <Route path="*" element={<Notfound />} />
+          <Route path="/garden-ideas" element={<GardenIdeas />} />
+        <Route path="/plants" element={<Plants />} />
+        <Route path="/design-garden" element={<DesignGarden />} />
         </Routes>
+
+        <section className="content-links-block py-5">
+      <div className="container text-center">
+        <h2 className="h3 mb-4">Create the garden you’ve always wanted</h2>
+
+        <div className="row g-4">
+
+          <div className="col-md-4">
+            <div className="card border-0 shadow-sm p-4 h-100">
+              <Link to="/garden-ideas" className="text-decoration-none text-dark">
+                <i className="fas fa-seedling fa-2x mb-3 text-success"></i>
+                <h3 className="h5">Get garden design ideas</h3>
+                <p>Find your perfect garden</p>
+              </Link>
+            </div>
+          </div>
+
+          <div className="col-md-4">
+            <div className="card border-0 shadow-sm p-4 h-100">
+              <Link to="/plants" className="text-decoration-none text-dark">
+                <i className="fas fa-leaf fa-2x mb-3 text-success"></i>
+                <h3 className="h5">Find the plants that work for you</h3>
+                <p>Ideas for seasons and regions</p>
+              </Link>
+            </div>
+          </div>
+
+          <div className="col-md-4">
+            <div className="card border-0 shadow-sm p-4 h-100">
+              <Link to="/design-garden" className="text-decoration-none text-dark">
+                <i className="fas fa-pencil-ruler fa-2x mb-3 text-success"></i>
+                <h3 className="h5">Design your garden</h3>
+                <p>Use interactive tools to design your dream garden</p>
+              </Link>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+        
 
         {/* Footer */}
         <footer className="bg-dark text-light pt-5 pb-3 mt-5">
@@ -184,7 +231,7 @@ function App() {
 
               <div className="col-md-3 mb-4">
                 <h5 className="fw-bold">Contact Us</h5>
-                <p>Email: support@thesill.com</p>
+                <p>Email: support@thebloom.com</p>
                 <p>Phone: +254 700 000 000</p>
 
                 <div>

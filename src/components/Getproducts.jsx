@@ -103,7 +103,76 @@ const Getproducts = () => {
       </div>
       )  )}
 
-     
+     <section className="container my-5 py-5">
+  <div className="row align-items-center">
+
+    {/* Left Content */}
+    <div className="col-md-6">
+      <h2 className="fw-bold mb-3">Speak to a Plant Specialist</h2>
+
+      <p className="text-muted fs-5">
+        Need help choosing the perfect plant for your space? 
+        Our plant specialists are ready to guide you with expert care tips,
+        styling advice, and personalized recommendations.
+      </p>
+
+      <button className="btn btn-success px-4 py-2 rounded-pill mt-3">
+        Book a Consultation
+      </button>
+    </div>
+
+    {/* Right Image */}
+    <div className="col-md-6 text-center">
+      <img
+        src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735"
+        alt="Plant Specialist"
+        className="img-fluid rounded shadow"
+      />
+    </div>
+
+  </div>
+</section>
+<section className="testimonial-section py-5">
+  
+  <div className=" text-center">
+
+    <h2 className="mb-5">What Our Customers Say</h2>
+
+    <div className="testimonial-card mx-auto">
+      <p>
+        "Absolutely beautiful plants and premium delivery experience."
+      </p>
+
+      <h5>- Leila</h5>
+    </div>
+
+  </div>
+</section>
+
+<section className="testimonial-section py-5">
+
+  <div className="col-md-7">
+    
+  </div>
+  
+  <div className="container text-center col-md-5">
+
+    
+
+    <div className="testimonial-card mx-auto">
+      <p>
+        "Absolutely beautiful plants and premium delivery experience."
+      </p>
+
+      <h5>- Mark</h5>
+    </div>
+
+  </div>
+</section>
+
+
+    
+
 
 
     </div>
