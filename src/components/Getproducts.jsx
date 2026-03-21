@@ -69,6 +69,34 @@ const Getproducts = () => {
 
   // console.log(products)
 
+   const items = [
+    {
+      icon: "🌿",
+      title: "Expert Guidance",
+      text: "Success starts with choosing the right plants—whether it’s a sunny succulent for your windowsill, a low-maintenance indoor green for your workspace, or a seasonal outdoor flower for your garden. "
+    },
+    {
+      icon: "🌱",
+      title: "Connect & Grow",
+      text: "Plants are more than decor—they’re a way to build community, learn, and share joy. Our workshops, events, and interactive sessions bring plant lovers together, from beginners to seasoned green thumbs. "
+    },
+    {
+      icon: "💚",
+      title: "Judgement-Free Service",
+      text: "Our team is here to guide you—no question is too small, no mistake too big. Whether you’re new to plant care or an experienced gardener exploring rare species, we provide patient, personalized advice without pressure or judgment.Think of us as your friendly plant concierge, ready to help you grow confidence alongside your greenery."
+    }
+  ];
+
+   const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % items.length);
+    }, 3500);
+
+    return () => clearInterval(interval);
+  }, []);
+
 
   return (
     <div className='row'>
@@ -104,10 +132,10 @@ const Getproducts = () => {
       )  )}
 
      <section className="container my-5 py-5">
-  <div className="row align-items-center">
+      <div className="row align-items-center">
 
     {/* Left Content */}
-    <div className="col-md-6">
+      <div className="col-md-6">
       <h2 className="fw-bold mb-3">Speak to a Plant Specialist</h2>
 
       <p className="text-muted fs-5">
@@ -119,7 +147,7 @@ const Getproducts = () => {
       <button className="btn btn-success px-4 py-2 rounded-pill mt-3">
         Book a Consultation
       </button>
-    </div>
+      </div>
 
     {/* Right Image */}
     <div className="col-md-6 text-center">
@@ -132,43 +160,116 @@ const Getproducts = () => {
 
   </div>
 </section>
+<section className="usp">
+      <div className="usp-container">
+        {items.map((item, index) => (
+          <div
+            key={index}
+            className={`usp-item ${index === activeIndex ? "active" : ""}`}
+          >
+            <span>{item.icon}</span>
+            <div>
+              <strong>{item.title}</strong>
+              <p>{item.text}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <style jsx>{`
+        .usp {
+          background: #f9f8f7;
+          padding: 20px;
+          border-radius: 70px;
+          font-family: papyrus;
+
+        }
+
+        .usp-container {
+          max-width: 600px;
+          margin: auto;
+        }
+
+        .usp-item {
+          display: none;
+          align-items: center;
+          gap: 15px;
+          color: #2a2d2f;
+          font-size: 16px;
+        }
+
+        .usp-item.active {
+          display: flex;
+          transform: translateX(30px);
+          opacity: 0 → 1
+        }
+
+        .usp-item span {
+          font-size: 28px;
+        }
+      `}</style>
+    </section>
 <section className="testimonial-section py-5">
-  
-  <div className=" text-center">
+  <div className="container text-center">
 
     <h2 className="mb-5">What Our Customers Say</h2>
 
-    <div className="testimonial-card mx-auto">
-      <p>
-        "Absolutely beautiful plants and premium delivery experience."
-      </p>
+    <div className="testimonial-wrapper">
 
-      <h5>- Leila</h5>
+      <div className="testimonial-card card-1">
+        <p>
+          "Absolutely beautiful plants and premium delivery experience.
+          Finally a plant website that doesn't make beginners feel lost.
+          Everything feels simple and welcoming. 💚"
+        </p>
+        <h5>- Sarah Warren</h5>
+      </div>
+
+      <div className="testimonial-card card-2">
+        <p>
+          "Beautifully designed, easy to navigate, and full of helpful plant advice —
+          it feels made for real plant lovers. It feels like shopping with someone
+          who actually understands plants and my lifestyle. 🪴"
+        </p>
+        <h5>- Leila Asha</h5>
+      </div>
+
+      <div className="testimonial-card card-3">
+        <p>
+          "A refreshing plant website that balances inspiration with practical guidance.
+          I like that the recommendations feel practical, especially for different weather conditions. 🌦️"
+        </p>
+        <h5>- Tom Stewart</h5>
+      </div>
+
     </div>
-
   </div>
 </section>
 
-<section className="testimonial-section py-5">
 
-  <div className="col-md-7">
+
+<div className="learning-title">
+  <div className="title-text">
+    <h2>Plant Care & Workshops</h2>
+    <p>Empowering all people to be plant people. Welcome to Plant Parenthood®.</p>
+
     
   </div>
-  
-  <div className="container text-center col-md-5">
 
+  <div className="title-images">
     
-
-    <div className="testimonial-card mx-auto">
-      <p>
-        "Absolutely beautiful plants and premium delivery experience."
-      </p>
-
-      <h5>- Mark</h5>
-    </div>
-
+    <img
+      src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b"
+      alt="Plant care"
+    />
   </div>
-</section>
+  <div className="title-links">
+      
+      <a href="/pages/plant-care-articles">Visit Our Blog →</a>
+    </div>
+</div>
+
+
 
 
     
@@ -176,7 +277,11 @@ const Getproducts = () => {
 
 
     </div>
+
+    
   )
 }
+
+
 
 export default Getproducts;

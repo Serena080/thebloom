@@ -63,11 +63,7 @@ function App() {
             </Link>
           </li>
 
-          <li>
-            <Link className="dropdown-item" to="/lowlightplants">
-              Low Light Plants
-            </Link>
-          </li>
+         
 
           <li>
             <Link className="dropdown-item" to="/petfriendly">
@@ -75,17 +71,9 @@ function App() {
             </Link>
           </li>
 
-          <li>
-            <Link className="dropdown-item" to="/largeplants">
-              Large Plants
-            </Link>
-          </li>
+          
 
-          <li>
-            <Link className="dropdown-item" to="/succulents">
-              Succulents
-            </Link>
-          </li>
+          
 
         </ul>
       </li>
@@ -109,17 +97,9 @@ function App() {
             </Link>
           </li>
 
-          <li>
-            <Link className="dropdown-item" to="/wateringtools">
-              Watering Tools
-            </Link>
-          </li>
+          
 
-          <li>
-            <Link className="dropdown-item" to="/fertilizers">
-              Fertilizers
-            </Link>
-          </li>
+         
 
         </ul>
       </li>

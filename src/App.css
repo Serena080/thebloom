@@ -1,6 +1,26 @@
 .App {
   text-align: center;
   background-color: bisque;
+  background-image:
+    radial-gradient(circle at top left, rgba(255,255,255,0.2), transparent),
+    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+    url("download \(37\).jpg");
+  background-size: cover;
+  
+  
+}
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.3rem;
+  }
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+}
+
+@keyframes fadeInBg {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .App-logo {
@@ -106,12 +126,52 @@
 
 .testimonial-card {
   max-width: 600px;
-  background: #885309;
+  background: #80cfa9;
   padding: 40px;
   border-radius: 30px;
   animation: floating 4s ease-in-out infinite;
   font-family: papyrus;
   
+}
+
+.testimonial-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.testimonial-card {
+  max-width: 500px;
+ 
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.card-1 {
+  margin-left: 0;
+}
+
+.card-2 {
+  margin-left: 80px;
+}
+
+.card-3 {
+  margin-left: 160px;
+}
+
+@media (max-width: 768px) {
+  .card-1,
+  .card-2,
+  .card-3 {
+    margin-left: 0;
+  }
+
+  .testimonial-card {
+    max-width: 100%;
+  }
 }
 
 .designgarden{
@@ -128,6 +188,81 @@
   background-color: honeydew;
   font-family: MV Boli;
 
+}
+
+.plant-selection-guide {
+  max-width: 850px;
+  margin: auto;
+  padding: 30px;
+  line-height: 1.8;
+  background-color: gainsboro;
+  border-radius: 30px;
+
+}
+
+.plant-selection-guide h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.plant-selection-guide h3 {
+  margin-top: 25px;
+  color: #2f6b3f;
+}
+
+.plant-selection-guide h4 {
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+/* .plant-selection-guide ul {
+  padding-left: 20px;
+} */
+
+.learning-title {
+  
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.title-text h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+
+
+.title-links {
+  display: flex;
+  gap: 20px;
+}
+
+.title-links a {
+  text-decoration: none;
+  color: #2f6b3f;
+  font-weight: 600;
+  transition: 0.3s;
+  background-color: lightgreen;
+}
+
+.title-links a:hover {
+  transform: translateX(5px);
+}
+
+.title-images {
+  display: flex;
+  gap: 15px;
+  flex: 1;
+  min-width: 300px;
+}
+
+.title-images img {
+  width: 48%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 
