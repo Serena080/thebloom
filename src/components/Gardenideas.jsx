@@ -40,6 +40,25 @@ function GardenIdeas() {
     <li>Native plants, meadows, and natural ponds</li>
     <li>Low maintenance, eco-friendly</li>
   </ul>
+
+  {/* Right side: Images */}
+        <div className="flex-1 p-8 bg-gray-50 flex flex-col items-center gap-6">
+          <img 
+            src="https://images.unsplash.com/photo-1612831661871-df2a5f60f5db?auto=format&fit=crop&w=600&q=80" 
+            alt="Cottage Garden Example" 
+            className="rounded-xl shadow-lg w-full object-cover"
+          />
+          <img 
+            src="https://images.unsplash.com/photo-1618221273151-3e0f79f16d20?auto=format&fit=crop&w=600&q=80" 
+            alt="Modern Garden Example" 
+            className="rounded-xl shadow-lg w-full object-cover"
+          />
+          <img 
+            src="https://images.unsplash.com/photo-1618221628941-1d9c1f6db85c?auto=format&fit=crop&w=600&q=80" 
+            alt="Japanese Garden Example" 
+            className="rounded-xl shadow-lg w-full object-cover"
+          />
+        </div>
 </div>
     </div>
   );

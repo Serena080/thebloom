@@ -12,6 +12,7 @@ import Makepayment from './components/Makepayment';
 import GardenIdeas from './components/Gardenideas';
 import Plants from './components/Plants';
 import DesignGarden from './components/Designgarden';
+import PlantChatBlog from './components/Blog';
 
 function App() {
   return (
@@ -133,6 +134,7 @@ function App() {
           <Route path="/garden-ideas" element={<GardenIdeas />} />
         <Route path="/plants" element={<Plants />} />
         <Route path="/design-garden" element={<DesignGarden />} />
+        <Route path='/blog'element={<PlantChatBlog/>}/>
         </Routes>
 
         <section className="content-links-block py-5">
