@@ -13,6 +13,10 @@ import GardenIdeas from './components/Gardenideas';
 import Plants from './components/Plants';
 import DesignGarden from './components/Designgarden';
 import PlantChatBlog from './components/Blog';
+import TestimonialsCarousel from './components/TestimonialCarousel';
+import Searchbar from './components/Searchbar';
+
+
 
 function App() {
   return (
@@ -28,6 +32,8 @@ function App() {
   <Link className="navbar-brand fw-bold text-success" to="/">
     The Bloom
   </Link>
+
+  
 
   <button
     className="navbar-toggler"
@@ -115,9 +121,11 @@ function App() {
 
     </ul>
 
-    <button className="btn btn-outline-success rounded-pill px-4">
+    <Searchbar/>
+
+    {/* <button className="btn btn-outline-success rounded-pill px-4">
       Cart
-    </button>
+    </button> */}
 
   </div>
 </nav>
@@ -135,6 +143,8 @@ function App() {
         <Route path="/plants" element={<Plants />} />
         <Route path="/design-garden" element={<DesignGarden />} />
         <Route path='/blog'element={<PlantChatBlog/>}/>
+        <Route path='/carousel' element={<TestimonialsCarousel/>}/>
+        
         </Routes>
 
         <section className="content-links-block py-5">
@@ -198,6 +208,15 @@ function App() {
                   <li><Link to="/signup" className="text-light text-decoration-none">Sign Up</Link></li>
                   <li><Link to="/signin" className="text-light text-decoration-none">Sign In</Link></li>
                   <li><Link to="/addproducts" className="text-light text-decoration-none">Introduce</Link></li>
+                </ul>
+              </div>
+
+              <div className='col-md-3 mb-4'>
+                <h5>Resources</h5>
+                <ul className="list-unstyled">
+                <li><a href="#">Plant Care Library</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="#">Courses</a></li>
                 </ul>
               </div>
 

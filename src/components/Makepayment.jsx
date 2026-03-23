@@ -79,7 +79,7 @@ const Makepayment = () => {
     <div className='row justify-content-center'>
 
      {/* <button className="btn btn-outline-dark">Back to products</button> */}
-     <h1 className="text-success">Make Payment- Lipa na Mpesa</h1>
+     <h1 className="text-success new-arrivals-heading">Make Payment- Lipa na Mpesa</h1>
 
      <div className="col-md-1">
             <input type="button"
@@ -88,7 +88,7 @@ const Makepayment = () => {
             onClick={()=> navigate("/")}/>
         </div>
 
-     <div className="col-md-7 card shadow p-4">
+     <div className="col-md-7 card shadow p-4 mpesacard">
           <img src={img_url+product.product_photo} alt="Product name" className='product_img'/>
 
           <div className="card-body">
@@ -112,9 +112,124 @@ const Makepayment = () => {
                     onChange={(e)=>setNumber(e.target.value)}/><br /> <br />
 
                     <input type="submit" 
-                    value="Make Payment"
+                    value="Pay for plant"
                     className='btn btn-success'/>
                </form> 
+
+               <div className="product-rating">
+  <div className="stars">★ ★ ★ ★ ☆</div>
+  <span className="rating-text">4.0 (24 reviews)</span>
+</div>
+
+
+<section className="product-options">
+
+  <div class="option-group">
+    <label>Pick a Size:</label>
+    <select>
+      <option>Small</option>
+      <option>Medium</option>
+      <option>Large</option>
+    </select>
+  </div>
+
+  <div class="option-group">
+    <label>Pick a Planter:</label>
+    <select>
+      <option>Marianne</option>
+      <option>Marcelle</option>
+    </select>
+  </div>
+
+  <div class="option-group">
+    <label>Pick a Color:</label>
+    <div class="color-options">
+      <span class="color white"></span>
+      <span class="color gold"></span>
+      <span class="color black"></span>
+    </div>
+  </div>
+
+</section>
+
+     <section className="plant-upsells">
+
+  <h3>Our Plant Experts Recommend</h3>
+
+  <div class="upsell-grid">
+
+    <div class="upsell-card">
+      {/* <img src="leafcare.jpg" alt="Leaf Care Spray"> */}
+      <h4>Leaf Care Spray</h4>
+      <p>Keep plants looking fresh and healthy.</p>
+      <span>KES 500</span>
+      <button>Add</button>
+    </div>
+
+    <div class="upsell-card">
+      {/* <img src="neemoil.jpg" alt="Organic Neem Oil"> */}
+      <h4>Organic Neem Oil</h4>
+      <p>Natural protection for healthy leaves.</p>
+      <span>KES 500</span>
+      <button>Add</button>
+    </div>
+
+    <div class="upsell-card">
+      {/* <img src="planter.jpg" alt="Decorative Planter"> */}
+      <h4>Decorative Planter</h4>
+      <p>Elegant planter for indoor styling.</p>
+      <span>KES 500</span>
+      <button>Add</button>
+    </div>
+
+  </div>
+
+ </section>
+
+ <section className="product-description">
+
+  <div class="description-content">
+    
+
+    <ul>
+      <li>Each plant is unique; size and shape vary by season</li>
+      <li>Height ranges between 20–28 inches</li>
+      <li>Arrives in a nursery grow pot inside your planter choice</li>
+      <li>Bloom colors may slightly vary from photos</li>
+    </ul>
+  </div>
+
+  <div class="care-guide">
+
+    {/* <img src="orchid.jpg" alt="Tropical Turquoise Orchid"> */}
+
+   
+
+   
+
+    <div class="care-item">
+      <h3>☀️ Sunlight Requirements</h3>
+      <p>Thrives in bright indirect light and tolerates medium indirect light.</p>
+    </div>
+
+    <div class="care-item">
+      <h3>💧 Watering Requirements</h3>
+      <p>Water every 1–2 weeks and allow potting medium to dry slightly.</p>
+    </div>
+
+    <div class="care-item">
+      <h3>🐾 Pet Friendly</h3>
+      <p>This plant is safe for pets.</p>
+    </div>
+
+    {/* <a href="#" class="care-btn">Read Full Care Guide →</a> */}
+
+  </div>
+
+</section>
+
+
+
 
                
 
@@ -123,6 +238,7 @@ const Makepayment = () => {
      </div>
       
     </div>
+
   )
 }
 

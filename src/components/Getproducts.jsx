@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import Loader from './Loader';
 import { useNavigate } from 'react-router-dom';
+import TestimonialsCarousel from './TestimonialCarousel';
 
 
 const Getproducts = () => {
@@ -100,11 +101,17 @@ const Getproducts = () => {
 
   return (
     <div className='row'>
-      <h3 className="text-dark">New Arrivals</h3>
+
+      {<TestimonialsCarousel/>}
+      <h3 className="text-dark new-arrivals-heading">
+        <span class="">⌛ Recent Additions</span>
+      </h3>
       {loading && <Loader/>}
 
 
       <h4 className="text-danger">{error}</h4>
+
+      
 
 
       {/* MAP the products fetched from the API to the user interface */}
@@ -130,6 +137,8 @@ const Getproducts = () => {
 
       </div>
       )  )}
+
+      <div class="plant-divider"></div>
 
      <section className="container my-5 py-5">
       <div className="row align-items-center">

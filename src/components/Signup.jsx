@@ -116,7 +116,7 @@ const Signup = () => {
   return (
     <div className='row justify-content-center mt-4'>
       <div className="card col-md-6 shadow p-4">
-        <h1 className='text-dark'>Sign up</h1>
+       <h1>Welcome to The Bloom 🌿</h1>
 
         <h5 className='text-warning'>{loading}</h5>
 
@@ -165,7 +165,13 @@ const Signup = () => {
 
           {/* {phone} */}
 
-          <input type="submit" value="Signup" className='btn btn-success'/> <br /> <br />
+          <label class="terms">
+          <input type="checkbox"
+           required/>
+            I agree to the Terms & Conditions
+          </label> <br /> <br />
+
+          <input type="submit" value="Join Now" className='btn btn-success'/> <br /> <br />
 
           Already have an account?<Link to= {'/signin'}> Signin</Link>
         </form>

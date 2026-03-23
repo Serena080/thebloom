@@ -124,6 +124,13 @@ const Signin = () => {
           onChange={(e) => setPassword(e.target.value)}/> <br /> <br />
 
           {/* {password} */}
+
+          <div class="login-options">
+        <label>
+          <input type="checkbox"/> Remember Me
+        </label> <br /> <br />
+        <a href="/signup">Forgot Password?</a>
+        </div>
            
 
           <input type="submit" 
@@ -141,6 +148,8 @@ const Signin = () => {
 
         </form>
       </div>
+
+      
     </div>
   )
 }
