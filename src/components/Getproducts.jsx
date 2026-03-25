@@ -151,6 +151,8 @@ const Getproducts = () => {
         Need help choosing the perfect plant for your space? 
         Our plant specialists are ready to guide you with expert care tips,
         styling advice, and personalized recommendations.
+        🌿 Leaf Love Reminder - 
+        “Don’t forget to whisper sweet nothings to your leafy friends.”
       </p>
 
       <button className="btn btn-success px-4 py-2 rounded-pill mt-3">
@@ -252,6 +254,28 @@ const Getproducts = () => {
       </div>
 
     </div>
+  </div>
+</section>
+
+<section className="container py-5">
+  <div className="row text-center">
+    <h3 className="text-dark new-arrivals-heading">
+        <span class="">Remember, neglect leads to drama—and droopy leaves!</span>
+      </h3>
+
+    {[
+      { icon: "sun", label: "Sun" },
+      { icon: "flower1", label: "Food" },
+      { icon: "droplet", label: "Water" },
+      { icon: "heart", label: "Care" },
+      { icon: "tree", label: "Growth" }
+    ].map((item, index) => (
+      <div className="col" key={index}>
+        <i className={`bi bi-${item.icon} text-success fs-1`}></i>
+        <h5 className="mt-2">{item.label}</h5>
+      </div>
+    ))}
+
   </div>
 </section>
 

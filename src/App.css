@@ -539,5 +539,15 @@ select {
 }
 
 
+section i {
+  transition: 0.3s;
+}
+
+section i:hover {
+  transform: scale(1.2);
+  color: #198754;
+}
+
+
 
 
