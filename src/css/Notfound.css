@@ -1,7 +1,99 @@
-.Notfound{
+.notfound-wrapper {
+  height: 100vh;
+  background: linear-gradient(135deg, #dff6e3, #f4fff6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
 
-  background-color: black;
-  color: red;
-  min-height: 50vh;
-  font-size: 50px;
+.notfound-card {
+  background: rgba(255,255,255,0.9);
+  padding: 50px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  text-align: center;
+  animation: fadeInUp 1.2s ease;
+}
+
+.notfound-card h1 {
+  font-size: 110px;
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.notfound-card h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #388e3c;
+}
+
+.notfound-card p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.home-btn {
+  background: #43a047;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.home-btn:hover {
+  background: #2e7d32;
+  transform: scale(1.05);
+}
+
+.leaf {
+  width: 60px;
+  height: 60px;
+  background: rgba(76,175,80,0.2);
+  border-radius: 50% 0;
+  position: absolute;
+  animation: floatLeaf 8s infinite ease-in-out;
+}
+
+.leaf1 {
+  top: 10%;
+  left: 15%;
+}
+
+.leaf2 {
+  top: 70%;
+  left: 75%;
+  animation-delay: 2s;
+}
+
+.leaf3 {
+  top: 30%;
+  left: 85%;
+  animation-delay: 4s;
+}
+
+@keyframes floatLeaf {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(20deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

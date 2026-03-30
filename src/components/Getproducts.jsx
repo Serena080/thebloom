@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 import Loader from './Loader';
 import { useNavigate } from 'react-router-dom';
 import TestimonialsCarousel from './TestimonialCarousel';
+import FloatingIcons from './FloatingIcons';
+import PlantSlider from './PlantCollections';
 
 
 const Getproducts = () => {
@@ -103,6 +105,8 @@ const Getproducts = () => {
     <div className='row'>
 
       {<TestimonialsCarousel/>}
+
+      
       <h3 className="text-dark new-arrivals-heading">
         <span class="">⌛ Recent Additions</span>
       </h3>
@@ -335,6 +339,7 @@ const Getproducts = () => {
   </a>
 
 </section>
+<PlantSlider/>
 
 
 <section class="contact-section">

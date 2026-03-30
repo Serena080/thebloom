@@ -1,0 +1,91 @@
+.orbit-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  background: linear-gradient(to bottom, #f5fff5, #eef8ee);
+}
+
+.orbit-container {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  animation: rotateOrbit 18s linear infinite;
+}
+
+.orbit-icon {
+  position: absolute;
+  font-size: 34px;
+  color: #2e8b57;
+  background: rgba(255,255,255,0.8);
+  padding: 14px;
+  border-radius: 50%;
+  box-shadow: 0 0 18px rgba(46,139,87,0.35);
+  animation: counterRotate 18s linear infinite;
+  transition: all 0.4s ease;
+}
+
+.orbit-icon:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 25px rgba(46,139,87,0.6);
+}
+
+/* Circular Positions */
+.icon1 { top: 0; left: 50%; transform: translateX(-50%); }
+.icon2 { top: 15%; right: 10%; }
+.icon3 { top: 50%; right: 0; transform: translateY(-50%); }
+.icon4 { bottom: 15%; right: 10%; }
+.icon5 { bottom: 0; left: 50%; transform: translateX(-50%); }
+.icon6 { bottom: 15%; left: 10%; }
+.icon7 { top: 50%; left: 0; transform: translateY(-50%); }
+.icon8 { top: 15%; left: 10%; }
+
+/* Center Content */
+.center-brand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 180px;
+  height: 180px;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 35px rgba(46,139,87,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-brand h2 {
+  font-size: 32px;
+  color: #2e8b57;
+  font-weight: bold;
+  margin: 0;
+}
+
+.center-brand p {
+  font-size: 14px;
+  color: #666;
+  margin-top: 6px;
+}
+
+/* Rotation */
+@keyframes rotateOrbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Keep icons upright */
+@keyframes counterRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
