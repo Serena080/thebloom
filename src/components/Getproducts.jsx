@@ -314,7 +314,7 @@ const Getproducts = () => {
       <span class="price">FREE</span>
       <h3>Gardening for Beginners</h3>
       <p>Start your outdoor garden with confidence and learn essential planting basics.</p>
-      <small>April 1</small>
+      <small>April 29</small>
     </div>
   </a>
 
@@ -324,7 +324,7 @@ const Getproducts = () => {
       <span class="price">FREE</span>
       <h3>Planting Bulbs Made Easy</h3>
       <p>Learn simple bulb planting techniques for long-lasting seasonal color.</p>
-      <small>April 8</small>
+      <small>May 8</small>
     </div>
   </a>
 
@@ -334,7 +334,7 @@ const Getproducts = () => {
       <span class="price">FREE</span>
       <h3>Sustainable Pest Management</h3>
       <p>Protect plants naturally using eco-friendly pest control methods.</p>
-      <small>April 15</small>
+      <small>June 15</small>
     </div>
   </a>
 
