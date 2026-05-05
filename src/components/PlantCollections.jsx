@@ -9,22 +9,22 @@ import 'swiper/css/autoplay'
 const categories = [
   {
     name: "Discounted",
-    items: "243 Items",
+    items: "32 Items",
     image: "https://plantly.io/wp-content/uploads/2022/12/Discount-300x300.jpg"
   },
   {
     name: "Rare Plants",
-    items: "473 Items",
+    items: "21 Items",
     image: "https://plantly.io/wp-content/uploads/2022/12/Rare-300x300.jpg"
   },
   {
     name: "Outdoor Plants",
-    items: "1401 Items",
+    items: "50 Items",
     image: "https://plantly.io/wp-content/uploads/2022/12/Outdoor-Plants-300x300.jpg"
   },
   {
     name: "Indoor Plants",
-    items: "1304 Items",
+    items: "20 Items",
     image: "https://plantly.io/wp-content/uploads/2022/12/Copy-of-Site-Images-300x300.jpg"
   }
 ]

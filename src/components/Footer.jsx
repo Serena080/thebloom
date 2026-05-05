@@ -24,7 +24,7 @@ const Footer = () => {
               <a href="/" className="text-light fs-4">
                 <i className="bi bi-instagram"></i>
               </a>
-              <a href="/" className="text-light fs-4">
+              <a href="https://www.pinterest.com/search/pins/?q=plants%20aesthetic&rs=ac&len=6&source_id=ac_yJu8RkTa&eq=plants&etslf=4810" className="text-light fs-4">
                 <i className="bi bi-pinterest"></i>
               </a>
             </div>
@@ -55,9 +55,9 @@ const Footer = () => {
           <div className="col-md-2 mb-4">
             <h5 className="fw-bold">Customer Support</h5>
             <ul className="list-unstyled">
-              <li><Link to="/" className="text-light text-decoration-none">FAQs</Link></li>
+              <li><Link to="/" className="text-light text-decoration-none">FAQs</Link></li> 
               <li><Link to="/" className="text-light text-decoration-none">Shipping</Link></li>
-              <li><Link to="/" className="text-light text-decoration-none">Returns</Link></li>
+              
               <li><Link to="/" className="text-light text-decoration-none">Plant Care Tips</Link></li>
             </ul>
           </div>

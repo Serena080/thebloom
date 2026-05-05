@@ -308,33 +308,33 @@ const Getproducts = () => {
 
 <section class="upcoming-events">
 
-  <a href="https://www.eventbrite.com/e/gardening-for-beginners-tickets-1982797730387?aff=odcleoeventsincollection" target="_blank" class="event-card ">
+  <a href="https://www.eventbrite.com/e/creating-a-pollinator-garden-containers-or-in-ground-tickets-1982799902885" target="_blank" class="event-card ">
     <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F734795929%2F218194620125%2F1%2Foriginal.20240403-152459?auto=format%2Ccompress&q=75&sharp=10&s=44b4227887d6732e5a8ff1edc1ddbac2" alt="Gardening for Beginners" />
     <div class="event-info">
       <span class="price">FREE</span>
       <h3>Gardening for Beginners</h3>
       <p>Start your outdoor garden with confidence and learn essential planting basics.</p>
-      <small>April 29</small>
+      <small>May 7</small>
     </div>
   </a>
 
-  <a href="https://www.eventbrite.com/e/planting-bulbs-made-easy-tickets-1982786193881?aff=odcleoeventsincollection" target="_blank" class="event-card">
+  <a href="https://www.eventbrite.com/e/how-to-care-for-citrus-trees-tickets-1985363678206" target="_blank" class="event-card">
     <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1177318852%2F218194620125%2F1%2Foriginal.20260211-210604?auto=format%2Ccompress&q=75&sharp=10&s=3a8a83df3530d018db28a69abaaf65ff" alt="Planting Bulbs" />
     <div class="event-info">
       <span class="price">FREE</span>
       <h3>Planting Bulbs Made Easy</h3>
       <p>Learn simple bulb planting techniques for long-lasting seasonal color.</p>
-      <small>May 8</small>
+      <small>May 14</small>
     </div>
   </a>
 
-  <a href="https://www.eventbrite.com/e/sustainable-pest-management-tickets-1982796047353?aff=odcleoeventsincollection" target="_blank" class="event-card">
+  <a href="https://www.eventbrite.com/e/how-to-care-for-zz-plants-tickets-1985365463546" target="_blank" class="event-card">
     <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1177189280%2F218194620125%2F1%2Foriginal.20260210-172702?auto=format%2Ccompress&q=75&sharp=10&s=653d313005f73be717838bf1abae33b3" alt="Pest Management" />
     <div class="event-info">
       <span class="price">FREE</span>
       <h3>Sustainable Pest Management</h3>
       <p>Protect plants naturally using eco-friendly pest control methods.</p>
-      <small>June 15</small>
+      <small>May 21</small>
     </div>
   </a>
 
@@ -360,7 +360,7 @@ const Getproducts = () => {
       <p><b>DM with a plant care expert</b></p>
     </a>
 
-    <a href="tel:+254700000000" class="contact-card">
+    <a href="tel:+254741442294" class="contact-card">
       <h4>📞 Call</h4>
       <p><b>Speak live to a plant care expert</b></p>
     </a>
