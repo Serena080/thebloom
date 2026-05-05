@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import TestimonialsCarousel from './TestimonialCarousel';
 import FloatingIcons from './FloatingIcons';
 import PlantSlider from './PlantCollections';
+import Plantwhisperer from './Plantwhisperer';
 
 
 const Getproducts = () => {
@@ -106,6 +107,7 @@ const Getproducts = () => {
 
       {<TestimonialsCarousel/>}
 
+      {<Plantwhisperer/>}
       
       <h3 className="text-dark new-arrivals-heading">
         <span class="">⌛ Recent Additions</span>
@@ -159,8 +161,10 @@ const Getproducts = () => {
         “Don’t forget to whisper sweet nothings to your leafy friends.”
       </p>
 
-      <button className="btn btn-success px-4 py-2 rounded-pill mt-3">
+      <button className="btn btn-success px-4 py-2 rounded-pill mt-3" 
+      href="/blog">
         Book a Consultation
+        
       </button>
       </div>
 

@@ -1,0 +1,99 @@
+.plantwhisperer-float-btn {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  background: #2e7d32;
+  color: white;
+  font-size: 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.plantwhisperer-chat-box {
+  position: fixed;
+  left: 20px;
+  bottom: 90px;
+  width: 320px;
+  height: 420px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.plantwhisperer-header {
+  background: #2e7d32;
+  color: white;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plantwhisperer-header button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.plantwhisperer-messages {
+  flex: 1;
+  padding: 12px;
+  overflow-y: auto;
+  background: #f6fdf6;
+}
+
+.message {
+  padding: 10px 12px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  max-width: 85%;
+  word-wrap: break-word;
+}
+
+.message.user {
+  background: #d9fdd3;
+  margin-left: auto;
+  text-align: right;
+}
+
+.message.bot {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  margin-right: auto;
+}
+
+.plantwhisperer-input-area {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid #ddd;
+  background: #fff;
+}
+
+.plantwhisperer-input-area input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+}
+
+.plantwhisperer-input-area button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  background: #2e7d32;
+  color: white;
+  cursor: pointer;
+}
