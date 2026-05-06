@@ -55,10 +55,19 @@ const Footer = () => {
           <div className="col-md-2 mb-4">
             <h5 className="fw-bold">Customer Support</h5>
             <ul className="list-unstyled">
-              <li><Link to="/" className="text-light text-decoration-none">FAQs</Link></li> 
+              <li><Link to="/blog" className="text-light text-decoration-none">FAQs</Link></li> 
               <li><Link to="/" className="text-light text-decoration-none">Shipping</Link></li>
               
-              <li><Link  className="text-light text-decoration-none">Plant Care Tips</Link></li>
+              <li>
+  <a
+    className="text-light text-decoration-none"
+    href="https://www.thrive.org.uk/get-gardening"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Plant Care Tips
+  </a>
+</li>
             </ul>
           </div>
 
