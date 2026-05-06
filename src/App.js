@@ -15,10 +15,11 @@ import Plants from './components/Plants';
 import DesignGarden from './components/Designgarden';
 import PlantChatBlog from './components/Blog';
 import TestimonialsCarousel from './components/TestimonialCarousel';
-import FloatingIcons from './components/FloatingIcons';
+
 import Header from './components/Header';
 import Footer from './components/Footer';
 import PlantSlider from './components/PlantCollections';
+import About from './components/About';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
                 <Route path="/" element={<Getproducts />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/signin" element={<Signin />} />
+                <Route path="/about" element = {<About/>}/>
                 <Route path="/addproducts" element={<Addproducts />} />
                 <Route path="/makepayment" element={<Makepayment />} />
                 <Route path="/garden-ideas" element={<GardenIdeas />} />
@@ -43,7 +45,7 @@ function App() {
                 <Route path="/design-garden" element={<DesignGarden />} />
                 <Route path="/blog" element={<PlantChatBlog />} />
                 <Route path="/carousel" element={<TestimonialsCarousel />} />
-                <Route path="/icons" element={<FloatingIcons />} />
+               
                 <Route path="/header" element={<Header />} />
                 <Route path='/footer' element = {<Footer/>}/>
                 <Route path='/collections' element = {<PlantSlider/>}/>

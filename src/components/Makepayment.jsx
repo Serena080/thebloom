@@ -158,29 +158,22 @@ const Makepayment = () => {
 
   <div class="upsell-grid">
 
-    <div class="upsell-card">
-      {/* <img src="leafcare.jpg" alt="Leaf Care Spray"> */}
-      <h4>Leaf Care Spray</h4>
-      <p>Keep plants looking fresh and healthy.</p>
-      <span>KES 500</span>
-      <button>Add</button>
-    </div>
+    
 
     <div class="upsell-card">
-      {/* <img src="neemoil.jpg" alt="Organic Neem Oil"> */}
+
+      <img 
+  src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
+  alt="Plant Care Spray"
+/>
+     
       <h4>Organic Neem Oil</h4>
       <p>Natural protection for healthy leaves.</p>
       <span>KES 500</span>
       <button>Add</button>
     </div>
 
-    <div class="upsell-card">
-      {/* <img src="planter.jpg" alt="Decorative Planter"> */}
-      <h4>Decorative Planter</h4>
-      <p>Elegant planter for indoor styling.</p>
-      <span>KES 500</span>
-      <button>Add</button>
-    </div>
+    
 
   </div>
 

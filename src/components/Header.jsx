@@ -28,7 +28,7 @@ const Header = () => {
             </li>
 
             {/* Plants Dropdown */}
-            <li className="nav-item dropdown">
+            {/* <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle text-dark"
                 href="/"
@@ -52,7 +52,7 @@ const Header = () => {
                   </Link>
                 </li>
               </ul>
-            </li>
+            </li> */}
 
             {/* Accessories Dropdown */}
             <li className="nav-item dropdown">
@@ -82,9 +82,15 @@ const Header = () => {
             <li className="nav-item">
               <Link className="nav-link text-dark" to="/signup">Sign Up</Link>
             </li>
+
+            <li className="nav-item">
+              <Link className="nav-link text-dark" to="/about">About Us</Link>
+            </li>
+
+
           </ul>
 
-          <Searchbar />
+          {/* <Searchbar /> */}
         </div>
       </nav>
     </header>

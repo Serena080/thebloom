@@ -18,10 +18,10 @@ const Footer = () => {
             </p>
 
             <div className="d-flex gap-3 mt-3">
-              <a href="/" className="text-light fs-4">
+              <a href="https://www.facebook.com/" className="text-light fs-4">
                 <i className="bi bi-facebook"></i>
               </a>
-              <a href="/" className="text-light fs-4">
+              <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2F%3Fhl%3Den&is_from_rle" className="text-light fs-4">
                 <i className="bi bi-instagram"></i>
               </a>
               <a href="https://www.pinterest.com/search/pins/?q=plants%20aesthetic&rs=ac&len=6&source_id=ac_yJu8RkTa&eq=plants&etslf=4810" className="text-light fs-4">
@@ -56,18 +56,9 @@ const Footer = () => {
             <h5 className="fw-bold">Customer Support</h5>
             <ul className="list-unstyled">
               <li><Link to="/blog" className="text-light text-decoration-none">FAQs</Link></li> 
-              <li><Link to="/" className="text-light text-decoration-none">Shipping</Link></li>
               
-              <li>
-  <a
-    className="text-light text-decoration-none"
-    href="https://www.thrive.org.uk/get-gardening"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Plant Care Tips
-  </a>
-</li>
+              
+              
             </ul>
           </div>
 

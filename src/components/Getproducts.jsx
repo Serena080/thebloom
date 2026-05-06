@@ -3,9 +3,10 @@ import React, { useEffect, useState } from 'react'
 import Loader from './Loader';
 import { useNavigate } from 'react-router-dom';
 import TestimonialsCarousel from './TestimonialCarousel';
-import FloatingIcons from './FloatingIcons';
+
 import PlantSlider from './PlantCollections';
 import Plantwhisperer from './Plantwhisperer';
+import Searchbar from './Searchbar';
 
 
 const Getproducts = () => {
@@ -13,6 +14,7 @@ const Getproducts = () => {
   //1. Initialize hooks to help you manage the state of your application
 
   const [products, setProducts]=useState([]);
+   const [filtered, setFiltered] = useState([]); // ✅ added for search
   const [loading,setLoading]=useState(false);
   const [error,setError]=useState("");
 
@@ -40,6 +42,8 @@ const Getproducts = () => {
 
       // 6.Update the products hook with the response given from the API
       setProducts(response.data)
+
+      setFiltered(response.data); // ✅ important for search
 
       // 7.Set the loading hook back to default
       setLoading(false)
@@ -70,6 +74,14 @@ const Getproducts = () => {
   useEffect(()=>{
     fetchProducts()
   }, [])
+
+  // 🔹 SEARCH FUNCTION (UNCHANGED ✅)
+  const handleSearch = (query) => {
+    const results = products.filter((product) =>
+      product.product_name.toLowerCase().includes(query.toLowerCase())
+    );
+    setFiltered(results);
+  };
 
   // console.log(products)
 
@@ -108,43 +120,69 @@ const Getproducts = () => {
       {<TestimonialsCarousel/>}
 
       {<Plantwhisperer/>}
+
+      {/* ✅ SEARCH BAR ADDED */}
+      <div className="mb-4 px-3">
+        <Searchbar onSearch={handleSearch} />
+      </div>
+
       
-      <h3 className="text-dark new-arrivals-heading">
-        <span class="">⌛ Recent Additions</span>
-      </h3>
+      
       {loading && <Loader/>}
 
 
       <h4 className="text-danger">{error}</h4>
+
+
+
+
 
       
 
 
       {/* MAP the products fetched from the API to the user interface */}
 
-      {products.map((product)  =>(
+       {/* ✅ USE FILTERED INSTEAD OF PRODUCTS */}
 
-         <div className="col-md-3 justify-content-center mb-3">
+      {filtered.length > 0 ? (
+  filtered.map((product) => (
+    <div
+      className="col-md-3 justify-content-center mb-3"
+      key={product.id}
+    >
+      <div className="card shadow cardeffect">
+        <img
+          src={img_url + product.product_photo}
+          alt="product name"
+          className="product_img mt-3"
+        />
 
-        <div className='card shadow cardeffect'>
-          <img src={img_url + product.product_photo} alt="product name"className='product_img mt-3' />
+        <div className="card-body">
+          <h5 className="text-dark">{product.product_name}</h5>
 
-          <div className="card-body">
-            <h5 className='text-dark'>{product.product_name}</h5>
+          <p className="text-dark">
+            {product.product_description.slice(0, 50)}...
+          </p>
 
-            <p className="text-dark">
-              {product.product_description.slice(0,50)}...
-            </p>
-            <h4 className="text-info">{product.product_cost}</h4>
+          <h4 className="text-info">{product.product_cost}</h4>
 
-            <button className=' btn btn-outline-success'onClick={()=>navigate("/makepayment",{state :{product}})}>Purchase Now</button>
-          </div>
+          <button
+            className="btn btn-outline-success"
+            onClick={() =>
+              navigate("/makepayment", { state: { product } })
+            }
+          >
+            Purchase Now
+          </button>
         </div>
-
       </div>
-      )  )}
+    </div>
+  ))
+) : (
+  <p className="text-center">No products found</p>
+)}
 
-      <div class="plant-divider"></div>
+      <div className="plant-divider"></div>
 
      <section className="container my-5 py-5">
       <div className="row align-items-center">
