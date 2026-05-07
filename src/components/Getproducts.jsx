@@ -4,7 +4,7 @@ import Loader from './Loader';
 import { useNavigate } from 'react-router-dom';
 import TestimonialsCarousel from './TestimonialCarousel';
 
-import PlantSlider from './PlantCollections';
+import PlantSlider from './PlantSlider';
 import Plantwhisperer from './Plantwhisperer';
 import Searchbar from './Searchbar';
 
@@ -13,10 +13,10 @@ const Getproducts = () => {
 
   //1. Initialize hooks to help you manage the state of your application
 
-  const [products, setProducts]=useState([]);
-   const [filtered, setFiltered] = useState([]); // ✅ added for search
-  const [loading,setLoading]=useState(false);
-  const [error,setError]=useState("");
+  const [products, setProducts] = useState([]);
+  const [filtered, setFiltered] = useState([]); // ✅ added for search
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   // Declare the navigate hook
   const navigate = useNavigate()
@@ -24,7 +24,7 @@ const Getproducts = () => {
 
   // Below we specify the image base url
 
-  const img_url="https://serena080.alwaysdata.net/static/images/"
+  const img_url = "https://serena080.alwaysdata.net/static/images/"
 
   // 2.Create a function that will help fetch products from the API
 
@@ -50,9 +50,9 @@ const Getproducts = () => {
 
 
 
-      
-    } 
-    
+
+    }
+
     catch (error) {
       // 8.Update the catch block
       // If there is an error
@@ -61,17 +61,17 @@ const Getproducts = () => {
 
       // .Update the error hook with a message 
       setError(error.message)
-      
+
     }
 
 
-    
+
   }
 
   // we shall use the useEffect hook.
   // This hook enables us to re-render new features in case of any changes
 
-  useEffect(()=>{
+  useEffect(() => {
     fetchProducts()
   }, [])
 
@@ -85,7 +85,7 @@ const Getproducts = () => {
 
   // console.log(products)
 
-   const items = [
+  const items = [
     {
       icon: "🌿",
       title: "Expert Guidance",
@@ -103,7 +103,7 @@ const Getproducts = () => {
     }
   ];
 
-   const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -117,18 +117,18 @@ const Getproducts = () => {
   return (
     <div className='row'>
 
-      {<TestimonialsCarousel/>}
+      {<TestimonialsCarousel />}
 
-      {<Plantwhisperer/>}
+      {<Plantwhisperer />}
 
       {/* ✅ SEARCH BAR ADDED */}
       <div className="mb-4 px-3">
         <Searchbar onSearch={handleSearch} />
       </div>
 
-      
-      
-      {loading && <Loader/>}
+
+
+      {loading && <Loader />}
 
 
       <h4 className="text-danger">{error}</h4>
@@ -137,103 +137,103 @@ const Getproducts = () => {
 
 
 
-      
+
 
 
       {/* MAP the products fetched from the API to the user interface */}
 
-       {/* ✅ USE FILTERED INSTEAD OF PRODUCTS */}
+      {/* ✅ USE FILTERED INSTEAD OF PRODUCTS */}
 
       {filtered.length > 0 ? (
-  filtered.map((product) => (
-    <div
-      className="col-md-3 justify-content-center mb-3"
-      key={product.id}
-    >
-      <div className="card shadow cardeffect">
-        <img
-          src={img_url + product.product_photo}
-          alt="product name"
-          className="product_img mt-3"
-        />
-
-        <div className="card-body">
-          <h5 className="text-dark">{product.product_name}</h5>
-
-          <p className="text-dark">
-            {product.product_description.slice(0, 50)}...
-          </p>
-
-          <h4 className="text-info">{product.product_cost}</h4>
-
-          <button
-            className="btn btn-outline-success"
-            onClick={() =>
-              navigate("/makepayment", { state: { product } })
-            }
+        filtered.map((product) => (
+          <div
+            className="col-md-3 justify-content-center mb-3"
+            key={product.id}
           >
-            Purchase Now
-          </button>
-        </div>
-      </div>
-    </div>
-  ))
-) : (
-  <p className="text-center">No products found</p>
-)}
+            <div className="card shadow cardeffect">
+              <img
+                src={img_url + product.product_photo}
+                alt="product name"
+                className="product_img mt-3"
+              />
+
+              <div className="card-body">
+                <h5 className="text-dark">{product.product_name}</h5>
+
+                <p className="text-dark">
+                  {product.product_description.slice(0, 50)}...
+                </p>
+
+                <h4 className="text-info">{product.product_cost}</h4>
+
+                <button
+                  className="btn btn-outline-success"
+                  onClick={() =>
+                    navigate("/makepayment", { state: { product } })
+                  }
+                >
+                  Purchase Now
+                </button>
+              </div>
+            </div>
+          </div>
+        ))
+      ) : (
+        <p className="text-center">No products found</p>
+      )}
 
       <div className="plant-divider"></div>
 
-     <section className="container my-5 py-5">
-      <div className="row align-items-center">
+      <section className="container my-5 py-5">
+        <div className="row align-items-center">
 
-    {/* Left Content */}
-      <div className="col-md-6">
-      <h2 className="fw-bold mb-3">Speak to a Plant Specialist</h2>
+          {/* Left Content */}
+          <div className="col-md-6">
+            <h2 className="fw-bold mb-3">Speak to a Plant Specialist</h2>
 
-      <p className="text-muted fs-5">
-        Need help choosing the perfect plant for your space? 
-        Our plant specialists are ready to guide you with expert care tips,
-        styling advice, and personalized recommendations.
-        🌿 Leaf Love Reminder - 
-        “Don’t forget to whisper sweet nothings to your leafy friends.”
-      </p>
+            <p className="text-muted fs-5">
+              Need help choosing the perfect plant for your space?
+              Our plant specialists are ready to guide you with expert care tips,
+              styling advice, and personalized recommendations.
+              🌿 Leaf Love Reminder -
+              “Don’t forget to whisper sweet nothings to your leafy friends.”
+            </p>
 
-      <button className="btn btn-success px-4 py-2 rounded-pill mt-3" 
-      href="/blog">
-        Book a Consultation
-        
-      </button>
-      </div>
+            <button className="btn btn-success px-4 py-2 rounded-pill mt-3"
+              href="/blog">
+              Book a Consultation
 
-    {/* Right Image */}
-    <div className="col-md-6 text-center">
-      <img
-        src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735"
-        alt="Plant Specialist"
-        className="img-fluid rounded shadow"
-      />
-    </div>
-
-  </div>
-</section>
-<section className="usp">
-      <div className="usp-container">
-        {items.map((item, index) => (
-          <div
-            key={index}
-            className={`usp-item ${index === activeIndex ? "active" : ""}`}
-          >
-            <span>{item.icon}</span>
-            <div>
-              <strong>{item.title}</strong>
-              <p>{item.text}</p>
-            </div>
+            </button>
           </div>
-        ))}
-      </div>
 
-      <style jsx>{`
+          {/* Right Image */}
+          <div className="col-md-6 text-center">
+            <img
+              src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735"
+              alt="Plant Specialist"
+              className="img-fluid rounded shadow"
+            />
+          </div>
+
+        </div>
+      </section>
+      <section className="usp">
+        <div className="usp-container">
+          {items.map((item, index) => (
+            <div
+              key={index}
+              className={`usp-item ${index === activeIndex ? "active" : ""}`}
+            >
+              <span>{item.icon}</span>
+              <div>
+                <strong>{item.title}</strong>
+                <p>{item.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <style jsx>{`
         .usp {
           background: #f9f8f7;
           padding: 20px;
@@ -265,167 +265,167 @@ const Getproducts = () => {
           font-size: 28px;
         }
       `}</style>
-    </section>
-<section className="testimonial-section py-5">
-  <div className="container text-center">
+      </section>
+      <section className="testimonial-section py-5">
+        <div className="container text-center">
 
-    <h2 className="mb-5">What Our Customers Say</h2>
+          <h2 className="mb-5">What Our Customers Say</h2>
 
-    <div className="testimonial-wrapper">
+          <div className="testimonial-wrapper">
 
-      <div className="testimonial-card card-1">
-        <p>
-          "Absolutely beautiful plants and premium delivery experience.
-          Finally a plant website that doesn't make beginners feel lost.
-          Everything feels simple and welcoming. 💚"
-        </p>
-        <h5>- Sarah Warren</h5>
+            <div className="testimonial-card card-1">
+              <p>
+                "Absolutely beautiful plants and premium delivery experience.
+                Finally a plant website that doesn't make beginners feel lost.
+                Everything feels simple and welcoming. 💚"
+              </p>
+              <h5>- Sarah Warren</h5>
+            </div>
+
+            <div className="testimonial-card card-2">
+              <p>
+                "Beautifully designed, easy to navigate, and full of helpful plant advice —
+                it feels made for real plant lovers. It feels like shopping with someone
+                who actually understands plants and my lifestyle. 🪴"
+              </p>
+              <h5>- Leila Asha</h5>
+            </div>
+
+            <div className="testimonial-card card-3">
+              <p>
+                "A refreshing plant website that balances inspiration with practical guidance.
+                I like that the recommendations feel practical, especially for different weather conditions. 🌦️"
+              </p>
+              <h5>- Tom Stewart</h5>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section className="container py-5">
+        <div className="row text-center">
+          <h3 className="text-dark new-arrivals-heading">
+            <span class="">Remember, neglect leads to drama—and droopy leaves!</span>
+          </h3>
+
+          {[
+            { icon: "sun", label: "Sun" },
+            { icon: "flower1", label: "Food" },
+            { icon: "droplet", label: "Water" },
+            { icon: "heart", label: "Care" },
+            { icon: "tree", label: "Growth" }
+          ].map((item, index) => (
+            <div className="col" key={index}>
+              <i className={`bi bi-${item.icon} text-success fs-1`}></i>
+              <h5 className="mt-2">{item.label}</h5>
+            </div>
+          ))}
+
+        </div>
+      </section>
+
+
+
+      <div className="learning-title">
+        <div className="title-text">
+          <h2>Plant Care & Workshops</h2>
+          <p>Empowering all people to be plant people. Welcome to Plant Parenthood®.</p>
+
+
+        </div>
+
+        <div className="title-images">
+
+          <img
+            src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b"
+            alt="Plant care"
+          />
+        </div>
+        <div className="title-links">
+
+          <a href="/blog">Visit Our Blog →</a>
+        </div>
       </div>
 
-      <div className="testimonial-card card-2">
-        <p>
-          "Beautifully designed, easy to navigate, and full of helpful plant advice —
-          it feels made for real plant lovers. It feels like shopping with someone
-          who actually understands plants and my lifestyle. 🪴"
-        </p>
-        <h5>- Leila Asha</h5>
-      </div>
+      <section class="upcoming-events">
 
-      <div className="testimonial-card card-3">
-        <p>
-          "A refreshing plant website that balances inspiration with practical guidance.
-          I like that the recommendations feel practical, especially for different weather conditions. 🌦️"
-        </p>
-        <h5>- Tom Stewart</h5>
-      </div>
+        <a href="https://www.eventbrite.com/e/creating-a-pollinator-garden-containers-or-in-ground-tickets-1982799902885" target="_blank" class="event-card ">
+          <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F734795929%2F218194620125%2F1%2Foriginal.20240403-152459?auto=format%2Ccompress&q=75&sharp=10&s=44b4227887d6732e5a8ff1edc1ddbac2" alt="Gardening for Beginners" />
+          <div class="event-info">
+            <span class="price">FREE</span>
+            <h3>Gardening for Beginners</h3>
+            <p>Start your outdoor garden with confidence and learn essential planting basics.</p>
+            <small>May 7</small>
+          </div>
+        </a>
 
-    </div>
-  </div>
-</section>
+        <a href="https://www.eventbrite.com/e/how-to-care-for-citrus-trees-tickets-1985363678206" target="_blank" class="event-card">
+          <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1177318852%2F218194620125%2F1%2Foriginal.20260211-210604?auto=format%2Ccompress&q=75&sharp=10&s=3a8a83df3530d018db28a69abaaf65ff" alt="Planting Bulbs" />
+          <div class="event-info">
+            <span class="price">FREE</span>
+            <h3>Planting Bulbs Made Easy</h3>
+            <p>Learn simple bulb planting techniques for long-lasting seasonal color.</p>
+            <small>May 14</small>
+          </div>
+        </a>
 
-<section className="container py-5">
-  <div className="row text-center">
-    <h3 className="text-dark new-arrivals-heading">
-        <span class="">Remember, neglect leads to drama—and droopy leaves!</span>
-      </h3>
+        <a href="https://www.eventbrite.com/e/how-to-care-for-zz-plants-tickets-1985365463546" target="_blank" class="event-card">
+          <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1177189280%2F218194620125%2F1%2Foriginal.20260210-172702?auto=format%2Ccompress&q=75&sharp=10&s=653d313005f73be717838bf1abae33b3" alt="Pest Management" />
+          <div class="event-info">
+            <span class="price">FREE</span>
+            <h3>Sustainable Pest Management</h3>
+            <p>Protect plants naturally using eco-friendly pest control methods.</p>
+            <small>May 21</small>
+          </div>
+        </a>
 
-    {[
-      { icon: "sun", label: "Sun" },
-      { icon: "flower1", label: "Food" },
-      { icon: "droplet", label: "Water" },
-      { icon: "heart", label: "Care" },
-      { icon: "tree", label: "Growth" }
-    ].map((item, index) => (
-      <div className="col" key={index}>
-        <i className={`bi bi-${item.icon} text-success fs-1`}></i>
-        <h5 className="mt-2">{item.label}</h5>
-      </div>
-    ))}
-
-  </div>
-</section>
+      </section>
+      <PlantSlider />
 
 
+      <section class="contact-section">
 
-<div className="learning-title">
-  <div className="title-text">
-    <h2>Plant Care & Workshops</h2>
-    <p>Empowering all people to be plant people. Welcome to Plant Parenthood®.</p>
+        <div class="contact-text">
+          <p>Speak to a Plant Specialist</p>
+          <h2>Need Help?</h2>
+          <p><b>Your confidence is our priority. Unsure what plants suit your light?
+            New to gardening? Reach out — we’re here to help.</b>
 
-    
-  </div>
+          </p>
+        </div>
 
-  <div className="title-images">
-    
-    <img
-      src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b"
-      alt="Plant care"
-    />
-  </div>
-  <div className="title-links">
-      
-      <a href="/blog">Visit Our Blog →</a>
-    </div>
-</div>
+        <div class="contact-options">
 
-<section class="upcoming-events">
+          <a href="/blog" class="contact-card">
+            <h4>💬 Chat</h4>
+            <p><b>DM with a plant care expert</b></p>
+          </a>
 
-  <a href="https://www.eventbrite.com/e/creating-a-pollinator-garden-containers-or-in-ground-tickets-1982799902885" target="_blank" class="event-card ">
-    <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F734795929%2F218194620125%2F1%2Foriginal.20240403-152459?auto=format%2Ccompress&q=75&sharp=10&s=44b4227887d6732e5a8ff1edc1ddbac2" alt="Gardening for Beginners" />
-    <div class="event-info">
-      <span class="price">FREE</span>
-      <h3>Gardening for Beginners</h3>
-      <p>Start your outdoor garden with confidence and learn essential planting basics.</p>
-      <small>May 7</small>
-    </div>
-  </a>
+          <a href="tel:+254741442294" class="contact-card">
+            <h4>📞 Call</h4>
+            <p><b>Speak live to a plant care expert</b></p>
+          </a>
 
-  <a href="https://www.eventbrite.com/e/how-to-care-for-citrus-trees-tickets-1985363678206" target="_blank" class="event-card">
-    <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1177318852%2F218194620125%2F1%2Foriginal.20260211-210604?auto=format%2Ccompress&q=75&sharp=10&s=3a8a83df3530d018db28a69abaaf65ff" alt="Planting Bulbs" />
-    <div class="event-info">
-      <span class="price">FREE</span>
-      <h3>Planting Bulbs Made Easy</h3>
-      <p>Learn simple bulb planting techniques for long-lasting seasonal color.</p>
-      <small>May 14</small>
-    </div>
-  </a>
+          <a href="mailto:info@yourwebsite.com" class="contact-card">
+            <h4>✉️ Email</h4>
+            <p><b>Send us your questions anytime</b></p>
+          </a>
 
-  <a href="https://www.eventbrite.com/e/how-to-care-for-zz-plants-tickets-1985365463546" target="_blank" class="event-card">
-    <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1177189280%2F218194620125%2F1%2Foriginal.20260210-172702?auto=format%2Ccompress&q=75&sharp=10&s=653d313005f73be717838bf1abae33b3" alt="Pest Management" />
-    <div class="event-info">
-      <span class="price">FREE</span>
-      <h3>Sustainable Pest Management</h3>
-      <p>Protect plants naturally using eco-friendly pest control methods.</p>
-      <small>May 21</small>
-    </div>
-  </a>
+        </div>
 
-</section>
-<PlantSlider/>
-
-
-<section class="contact-section">
-
-  <div class="contact-text">
-    <p>Speak to a Plant Specialist</p>
-    <h2>Need Help?</h2>
-    <p><b>Your confidence is our priority. Unsure what plants suit your light?
-      New to gardening? Reach out — we’re here to help.</b>
-      
-    </p>
-  </div>
-
-  <div class="contact-options">
-
-    <a href="/blog" class="contact-card">
-      <h4>💬 Chat</h4>
-      <p><b>DM with a plant care expert</b></p>
-    </a>
-
-    <a href="tel:+254741442294" class="contact-card">
-      <h4>📞 Call</h4>
-      <p><b>Speak live to a plant care expert</b></p>
-    </a>
-
-    <a href="mailto:info@yourwebsite.com" class="contact-card">
-      <h4>✉️ Email</h4>
-      <p><b>Send us your questions anytime</b></p>
-    </a>
-
-  </div>
-
-</section>
+      </section>
 
 
 
 
-    
+
 
 
 
     </div>
 
-    
+
   )
 }
 

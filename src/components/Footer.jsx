@@ -93,15 +93,15 @@ const Footer = () => {
           <p className="mb-2">© 2026 The Bloom. All Rights Reserved 🌱</p>
 
           <div>
-            <Link to="/" className="text-light text-decoration-none me-3">
+            <Link to="/about" className="text-light text-decoration-none me-3">
               Privacy Policy
             </Link>
 
-            <Link to="/" className="text-light text-decoration-none me-3">
+            <Link to="/about" className="text-light text-decoration-none me-3">
               Terms & Conditions
             </Link>
 
-            <Link to="/" className="text-light text-decoration-none">
+            <Link to="/about" className="text-light text-decoration-none">
               Accessibility
             </Link>
           </div>
