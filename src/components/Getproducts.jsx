@@ -145,7 +145,9 @@ const Getproducts = () => {
       {/* ✅ USE FILTERED INSTEAD OF PRODUCTS */}
 
       {filtered.length > 0 ? (
-        filtered.map((product) => (
+        filtered
+        .slice(0, 8)   // ✅ LIMIT TO 8 PRODUCTS
+        .map((product) => (
           <div
             className="col-md-3 justify-content-center mb-3"
             key={product.id}
