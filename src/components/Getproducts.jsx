@@ -201,12 +201,15 @@ const Getproducts = () => {
               “Don’t forget to whisper sweet nothings to your leafy friends.”
             </p>
 
-            <button className="btn btn-success px-4 py-2 rounded-pill mt-3"
-              href="/blog">
-              Book a Consultation
-
-            </button>
+            <a
+  href="tel:+254741442294"
+  className="btn btn-success px-4 py-2 rounded-pill mt-3"
+>
+  Book a Consultation
+</a>
           </div>
+
+          
 
           {/* Right Image */}
           <div className="col-md-6 text-center">
@@ -268,6 +271,9 @@ const Getproducts = () => {
         }
       `}</style>
       </section>
+
+       <PlantSlider />
+
       <section className="testimonial-section py-5">
         <div className="container text-center">
 
@@ -383,8 +389,7 @@ const Getproducts = () => {
         </a>
 
       </section>
-      <PlantSlider />
-
+     
 
       <section class="contact-section">
 

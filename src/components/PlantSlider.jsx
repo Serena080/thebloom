@@ -51,7 +51,7 @@ const PlantSlider = () => {
   )
 
   const rarePlants = products.filter(product =>
-    product.product_name.toLowerCase().includes("rare")
+    product.product_description.toLowerCase().includes("rare")
   )
 
   const indoorPlants = products.filter(product =>
