@@ -119,7 +119,7 @@ const Getproducts = () => {
 
       {<TestimonialsCarousel />}
 
-      {<Plantwhisperer />}
+      {/* {<Plantwhisperer />} */}
 
       {/* ✅ SEARCH BAR ADDED */}
       <div className="mb-4 px-3">

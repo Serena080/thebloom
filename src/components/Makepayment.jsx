@@ -133,13 +133,7 @@ const Makepayment = () => {
     </select>
   </div>
 
-  <div class="option-group">
-    <label>Pick a Planter:</label>
-    <select>
-      <option>Marianne</option>
-      <option>Marcelle</option>
-    </select>
-  </div>
+ 
 
   <div class="option-group">
     <label>Pick a Color:</label>
@@ -210,10 +204,7 @@ const Makepayment = () => {
       <p>Water every 1–2 weeks and allow potting medium to dry slightly.</p>
     </div>
 
-    <div class="care-item">
-      <h3>🐾 Pet Friendly</h3>
-      <p>This plant is safe for pets.</p>
-    </div>
+   
 
     {/* <a href="#" class="care-btn">Read Full Care Guide →</a> */}
 

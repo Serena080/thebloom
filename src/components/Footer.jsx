@@ -68,7 +68,7 @@ const Footer = () => {
             <p>Email: support@thebloom.com</p>
             <p>Phone: +254 700 000 000</p>
 
-            <h6 className="fw-bold">Download App</h6>
+            {/* <h6 className="fw-bold">Download App</h6>
 
             <img
               src="https://plantly.io/wp-content/uploads/2020/10/badge_apple.png"
@@ -83,7 +83,7 @@ const Footer = () => {
               src="https://plantly.io/wp-content/uploads/2020/10/badge_android.png"
               alt="Google Play"
               width="140"
-            />
+            /> */}
           </div>
         </div>
 

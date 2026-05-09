@@ -21,6 +21,7 @@ import Footer from './components/Footer';
 import PlantSlider from './components/PlantSlider';
 import About from './components/About';
 import CollectionProducts from './components/CollectionProducts';
+import Pots from './components/Pots';
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
                 <Route path="/header" element={<Header />} />
                 <Route path='/footer' element={<Footer />} />
                 <Route path='/collections' element={<PlantSlider />} />
+                <Route path='/pots' element = {<Pots />} />
 
                 <Route path="/collections/:type" element={<CollectionProducts />}/>
   
