@@ -146,15 +146,15 @@ const Makepayment = () => {
 
 </section>
 
-     <section className="plant-upsells">
+     {/* <section className="plant-upsells">
 
   <h3>Our Plant Experts Recommend</h3>
 
-  <div class="upsell-grid">
+  <div class="upsell-grid"> */}
 
     
 
-    <div class="upsell-card">
+    {/* <div class="upsell-card">
 
       <img 
   src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
@@ -165,13 +165,13 @@ const Makepayment = () => {
       <p>Natural protection for healthy leaves.</p>
       <span>KES 500</span>
       <button>Add</button>
-    </div>
+    </div> */}
 
     
 
-  </div>
+  {/* </div>
 
- </section>
+ </section> */}
 
  <section className="product-description">
 
