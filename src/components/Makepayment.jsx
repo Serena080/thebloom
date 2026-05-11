@@ -116,10 +116,10 @@ const Makepayment = () => {
                     className='btn btn-success'/>
                </form> 
 
-               <div className="product-rating">
+               {/* <div className="product-rating">
   <div className="stars">★ ★ ★ ★ ☆</div>
   <span className="rating-text">4.0 (24 reviews)</span>
-</div>
+</div> */}
 
 
 <section className="product-options">
